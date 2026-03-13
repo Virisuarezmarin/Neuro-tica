@@ -1,210 +1,270 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
-# -----------------------------
-# Configuración de la página
-# -----------------------------
+# ---------------------------
+# Configuración de página
+# ---------------------------
 st.set_page_config(
     page_title="Neurología Digital e IA",
     page_icon="🧠",
     layout="wide"
 )
 
-# -----------------------------
-# Estilos CSS minimalistas
-# -----------------------------
+# ---------------------------
+# Estilos CSS
+# ---------------------------
 st.markdown("""
 <style>
 
 .main-title{
-    font-size:42px;
-    font-weight:700;
+font-size:42px;
+font-weight:700;
 }
 
 .motivational{
-    text-align:right;
-    font-style:italic;
-    color:#4a4a4a;
-    margin-bottom:30px;
+text-align:right;
+font-style:italic;
+color:#555;
+margin-bottom:30px;
 }
 
 .card{
-    background-color:#ffffff;
-    padding:35px;
-    border-radius:20px;
-    border:1px solid #e6e6e6;
-    box-shadow:0px 4px 15px rgba(0,0,0,0.05);
+background-color:#ffffff;
+padding:40px;
+border-radius:20px;
+border:1px solid #e6e6e6;
+box-shadow:0px 6px 18px rgba(0,0,0,0.05);
 }
 
 .section-title{
-    font-size:24px;
-    font-weight:600;
-    margin-top:25px;
+font-size:26px;
+font-weight:600;
+margin-top:30px;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# -----------------------------
-# Sidebar
-# -----------------------------
+# ---------------------------
+# SIDEBAR
+# ---------------------------
+
 st.sidebar.title("Panel de navegación")
 
-section = st.sidebar.selectbox(
-    "Selecciona sección",
-    ["Artículo", "Visualizaciones", "Referencias"]
-)
-
-variable = st.sidebar.selectbox(
-    "Variable de análisis",
-    ["Marcha", "Diagnóstico IA", "Biomarcadores"]
+section = st.sidebar.radio(
+    "Secciones del artículo",
+    [
+        "Introducción",
+        "Ética en IA",
+        "Diagnóstico del Alzheimer",
+        "Parkinson y aprendizaje automático",
+        "Neurología Digital",
+        "Conclusión",
+        "Referencias"
+    ]
 )
 
 st.sidebar.markdown("---")
-st.sidebar.write("Dashboard educativo sobre IA y neurología.")
+st.sidebar.info("Dashboard de divulgación científica sobre IA y neurología.")
 
-# -----------------------------
-# Título principal
-# -----------------------------
+# ---------------------------
+# TÍTULO
+# ---------------------------
+
 st.markdown(
-    '<div class="main-title">El Algoritmo del Olvido y el Paso del Tiempo</div>',
-    unsafe_allow_html=True
+'<div class="main-title">El Algoritmo del Olvido y el Paso del Tiempo: Cómo la IA y la Ética Redefinen la Neurología</div>',
+unsafe_allow_html=True
 )
 
 st.markdown(
-    '<div class="motivational">Como sociedad, el reto es asegurar que, mientras las máquinas aprenden a diagnosticarnos, nosotros no olvidemos la importancia de cuidar el contexto humano que nos rodea.</div>',
-    unsafe_allow_html=True
+'<div class="motivational">Como sociedad, el reto es asegurar que, mientras las máquinas aprenden a diagnosticarnos, nosotros no olvidemos la importancia de cuidar el contexto humano que nos rodea.</div>',
+unsafe_allow_html=True
 )
 
-# -----------------------------
-# ARTÍCULO
-# -----------------------------
-if section == "Artículo":
+# ---------------------------
+# INTRODUCCIÓN
+# ---------------------------
+
+if section == "Introducción":
 
     st.markdown('<div class="card">', unsafe_allow_html=True)
 
-    st.markdown("""
-La medicina moderna se encuentra en un punto de inflexión. Imagine un escenario donde un reloj inteligente o una cámara de alta resolución puedan detectar los primeros signos de una enfermedad neurodegenerativa años antes de que aparezcan los síntomas evidentes.  
+    st.write("""
+La medicina moderna se encuentra en un punto de inflexión. Imagine un escenario donde un reloj inteligente o una cámara de alta resolución puedan detectar los primeros signos de una enfermedad neurodegenerativa años antes de que aparezcan los síntomas evidentes. Esta no es una escena de ciencia ficción, sino el resultado de la convergencia entre la Inteligencia Artificial (IA) y las neurotecnologías.
 
-Esta no es una escena de ciencia ficción, sino el resultado de la convergencia entre la Inteligencia Artificial (IA) y las neurotecnologías.  
+Sin embargo, a medida que nuestras máquinas se vuelven más inteligentes para leer nuestro cerebro, surgen preguntas fundamentales: ¿Cómo protegemos nuestra privacidad mental? ¿Cómo garantizamos que estos algoritmos sean justos?
 
-Sin embargo, a medida que nuestras máquinas se vuelven más inteligentes para leer nuestro cerebro, surgen preguntas fundamentales:  
-
-- ¿Cómo protegemos nuestra privacidad mental?  
-- ¿Cómo garantizamos que estos algoritmos sean justos?  
-
-Este artículo explora cómo el aprendizaje automático y la ética se han unido para transformar el diagnóstico del Alzheimer y el Parkinson.
-""")
-
-    st.markdown('<div class="section-title">1. Más allá de los números: ética en contexto</div>', unsafe_allow_html=True)
-
-    st.markdown("""
-Tradicionalmente, la ética tecnológica se ha basado en principios abstractos como la justicia o la transparencia. Sin embargo, en el contexto clínico real estos principios necesitan aterrizarse en situaciones concretas.
-
-Resseguier y Rodrigues proponen una **“ética como atención al contexto”**, donde las decisiones tecnológicas consideran las realidades sociales y clínicas.
-
-Uno de los mayores desafíos es el problema de la **“caja negra”**: muchos modelos de aprendizaje automático producen resultados precisos, pero su proceso interno es difícil de interpretar.
-""")
-
-    st.markdown('<div class="section-title">2. Detectando el Alzheimer antes de perder los recuerdos</div>', unsafe_allow_html=True)
-
-    st.markdown("""
-Las **redes neuronales convolucionales (CNN)** permiten analizar imágenes médicas como resonancias magnéticas.
-
-Investigaciones recientes han alcanzado **precisiones cercanas al 98% en el diagnóstico temprano del Alzheimer** mediante análisis automatizado de imágenes cerebrales.
-
-Además, el cerebro también puede estudiarse indirectamente a través de la **marcha humana**. Cambios en la velocidad, longitud del paso o variabilidad del movimiento pueden actuar como biomarcadores digitales tempranos.
-""")
-
-    st.markdown('<div class="section-title">3. El Parkinson bajo la lupa de los algoritmos</div>', unsafe_allow_html=True)
-
-    st.markdown("""
-El Parkinson es una enfermedad compleja cuyo diagnóstico clínico puede variar entre especialistas.
-
-Los algoritmos de aprendizaje automático pueden analizar **parámetros de la marcha** para identificar patrones asociados con la enfermedad.
-
-Cinco variables clave identificadas por investigaciones recientes incluyen:
-
-- Velocidad media del paso  
-- Longitud del paso  
-- Variabilidad del paso  
-- Ancho del paso  
-- Variabilidad del ancho
-
-Además, los **wearables** permiten monitoreo continuo mediante sensores de movimiento, lo que ayuda a detectar cuándo la medicación está funcionando correctamente.
-""")
-
-    st.markdown('<div class="section-title">4. Hacia una neurología digital</div>', unsafe_allow_html=True)
-
-    st.markdown("""
-La integración de IA, neuroimagen y sensores portátiles está dando lugar a una nueva disciplina: la **neurología digital**.
-
-Este enfoque combina:
-
-**Lo estructural:** análisis de imágenes cerebrales mediante IA.  
-**Lo funcional:** análisis de la marcha y el comportamiento motor.
-
-El objetivo es lograr **detección temprana, monitoreo continuo y tratamientos personalizados**, siempre respetando la privacidad y la dignidad humana.
-""")
-
-    st.markdown('<div class="section-title">Conclusión</div>', unsafe_allow_html=True)
-
-    st.markdown("""
-La inteligencia artificial tiene el potencial de transformar la neurología clínica.
-
-Pero el verdadero éxito no se medirá solo por la precisión de los algoritmos, sino por su capacidad de integrarse en sistemas de salud que prioricen:
-
-- Transparencia  
-- Equidad  
-- Dignidad humana  
-
-La tecnología debe complementar el juicio clínico, no reemplazar el contexto humano que define la medicina.
+Este artículo explora cómo el aprendizaje automático y la ética se han unido para transformar el diagnóstico del Alzheimer y el Parkinson, basándose en una sólida estructura de investigación científica.
 """)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# -----------------------------
-# VISUALIZACIONES
-# -----------------------------
-elif section == "Visualizaciones":
+# ---------------------------
+# ÉTICA
+# ---------------------------
 
-    st.header("Visualización de datos simulados")
+elif section == "Ética en IA":
 
-    data = pd.DataFrame({
-        "Velocidad_paso": np.random.normal(1.2,0.2,100),
-        "Longitud_paso": np.random.normal(0.7,0.1,100),
-        "Variabilidad": np.random.normal(0.2,0.05,100)
-    })
+    st.markdown('<div class="card">', unsafe_allow_html=True)
 
-    st.subheader("Distribución de variables de marcha")
-    st.bar_chart(data)
+    st.markdown("### Más allá de los números: Una ética 'con los pies en la tierra'")
 
-    st.subheader("Relación entre variables")
-    st.scatter_chart(data)
+    st.write("""
+Tradicionalmente, la ética en la tecnología se ha manejado mediante grandes principios abstractos, como "haz el bien" o "sé justo". No obstante, la realidad de los hospitales y los pacientes es mucho más compleja.
 
-# -----------------------------
+Por ello, expertos como Resseguier y Rodrigues (2021) proponen un cambio de visión: pasar de una ética teórica a una "ética como atención al contexto".
+""")
+
+    st.markdown("#### El problema de la 'Caja Negra'")
+
+    st.write("""
+El motor de este avance es el Aprendizaje Automático (machine learning), un sistema que permite a las computadoras aprender patrones a partir de datos masivos.
+
+El reto es que muchas veces estos sistemas funcionan como una **"caja negra"**: sabemos qué resultado arrojan, pero no exactamente cómo llegaron a él.
+
+Si no prestamos atención al contexto social, corremos el riesgo de que los algoritmos hereden prejuicios o ignoren las desigualdades de la vida real.
+""")
+
+    st.markdown("#### Neuroética e IA: Una alianza necesaria")
+
+    st.write("""
+Cuando hablamos de enfermedades del cerebro, la ética de los datos se mezcla con la **neuroética**, que estudia las implicaciones de intervenir en la mente humana.
+
+Dado que estas tecnologías tocan fibras sensibles como nuestra identidad y autonomía, diversos autores sostienen que la colaboración entre expertos en ética de IA y neurocientíficos es vital.
+""")
+
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------------------
+# ALZHEIMER
+# ---------------------------
+
+elif section == "Diagnóstico del Alzheimer":
+
+    st.markdown('<div class="card">', unsafe_allow_html=True)
+
+    st.markdown("### Detectando el Alzheimer antes de que se pierdan los recuerdos")
+
+    st.write("""
+La enfermedad de Alzheimer es la causa más común de demencia en el mundo. Detectarla a tiempo es como intentar encontrar una aguja en un pajar de datos clínicos.
+
+Aquí es donde entran las **Redes Neuronales Convolucionales (CNN)**.
+""")
+
+    st.markdown("#### Los ojos digitales de la medicina")
+
+    st.write("""
+Las CNN son un tipo de diseño de IA inspirado en la visión humana, ideal para analizar imágenes médicas.
+
+Cuando se aplican a las resonancias magnéticas, los resultados son sorprendentes. Investigaciones han logrado niveles de precisión cercanos al **98.67% en el diagnóstico temprano**.
+""")
+
+    st.markdown("#### La marcha como espejo del cerebro")
+
+    st.write("""
+El cerebro no solo se observa en imágenes; también se refleja en la manera en que nos movemos.
+
+La forma de caminar —la marcha— puede convertirse en un **biomarcador digital temprano**, revelando alteraciones neurológicas antes de que los síntomas sean evidentes.
+""")
+
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------------------
+# PARKINSON
+# ---------------------------
+
+elif section == "Parkinson y aprendizaje automático":
+
+    st.markdown('<div class="card">', unsafe_allow_html=True)
+
+    st.markdown("### El Parkinson bajo la lupa de los algoritmos")
+
+    st.write("""
+El Parkinson es una enfermedad compleja y a menudo subjetiva; lo que un médico ve como un temblor leve, otro podría interpretarlo de forma distinta.
+
+El aprendizaje automático permite una **medición objetiva** basada en datos.
+""")
+
+    st.markdown("#### Los cinco pilares del movimiento")
+
+    st.write("""
+Investigaciones han identificado cinco parámetros clave para una detección temprana:
+
+• Velocidad media del paso  
+• Longitud del paso  
+• Variabilidad de la longitud  
+• Ancho del paso  
+• Variabilidad del ancho
+""")
+
+    st.markdown("#### Tecnología para llevar puesta (Wearables)")
+
+    st.write("""
+Los sensores portátiles permiten monitoreo continuo del movimiento.  
+Esto facilita detectar cuándo la medicación está funcionando correctamente y cuándo deja de hacerlo.
+""")
+
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------------------
+# NEUROLOGÍA DIGITAL
+# ---------------------------
+
+elif section == "Neurología Digital":
+
+    st.markdown('<div class="card">', unsafe_allow_html=True)
+
+    st.write("""
+La integración de IA, neuroimagen y sensores portátiles está dando lugar a una nueva disciplina: **Neurología Digital**.
+
+Este enfoque combina:
+
+**Lo estructural:** imágenes cerebrales analizadas por IA.  
+**Lo funcional:** análisis de la marcha y comportamiento motor.
+
+Esta visión holística permite una **detección temprana más precisa** y tratamientos personalizados.
+""")
+
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------------------
+# CONCLUSIÓN
+# ---------------------------
+
+elif section == "Conclusión":
+
+    st.markdown('<div class="card">', unsafe_allow_html=True)
+
+    st.write("""
+La inteligencia artificial tiene el potencial de devolvernos tiempo y calidad de vida frente a enfermedades neurodegenerativas.
+
+Sin embargo, el verdadero éxito de estas tecnologías no se medirá solo por su precisión, sino por su capacidad para integrarse en sistemas de salud que prioricen la **transparencia, la equidad y la dignidad humana**.
+""")
+
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------------------
 # REFERENCIAS
-# -----------------------------
+# ---------------------------
+
 elif section == "Referencias":
 
-    st.header("Artículos científicos utilizados")
+    st.header("Artículos científicos")
 
-    article_titles = [
-        "Selecting clinically relevant gait characteristics for Parkinson’s disease",
-        "Detecting On/Off state in Parkinson using wearable signals",
-        "Neuroethics and AI ethics: a proposal for collaboration",
-        "Predictive power of gait in mild cognitive impairment",
-        "Machine learning models for Parkinson detection",
-        "Early diagnosis of Alzheimer's from MRI with deep learning",
-        "Ethics as attention to context in AI",
-        "The AI inflection point in clinical neuropsychology"
-    ]
+    referencias = {
+        "Rehman et al. (2019)": "Estudio que usa machine learning para seleccionar las características de la marcha más relevantes para clasificar Parkinson temprano con alta precisión.",
+        "Aich et al. (2020)": "Algoritmo de machine learning para detectar estados On/Off en Parkinson usando sensores portátiles.",
+        "Salles & Farisco (2024)": "Propone colaboración entre ética de IA y neuroética para abordar problemas éticos emergentes.",
+        "Tuena et al. (2024)": "Estudio que usa machine learning para predecir conversión de deterioro cognitivo leve a Alzheimer.",
+        "Ferreira et al. (2022)": "Modelos de aprendizaje automático para detectar Parkinson y clasificar sus etapas usando parámetros de marcha.",
+        "Javid & Feghhi (2021)": "Modelo de deep learning para diagnóstico temprano de Alzheimer usando imágenes de resonancia magnética."
+    }
 
-    selected = st.selectbox(
-        "Selecciona un artículo",
-        article_titles
-    )
+    for titulo, resumen in referencias.items():
 
-    st.write("Artículo seleccionado:")
-    st.info(selected)
+        st.subheader(titulo)
+
+        if st.button(f"Mostrar resumen — {titulo}"):
+
+            st.info(resumen)
+
+        st.markdown("---")
