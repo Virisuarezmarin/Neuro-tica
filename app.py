@@ -376,7 +376,6 @@ elif section == "Referencias":
     "resumen":"Propone gobernar las neurotecnologías basadas en IA mediante un marco de derechos humanos."
     }
 
-    ]
 
     for ref in referencias:
 
