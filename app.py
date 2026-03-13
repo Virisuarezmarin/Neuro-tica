@@ -256,6 +256,12 @@ elif section == "Referencias":
 
     referencias = [
 
+    elif section == "Referencias":
+
+    st.header("Referencias científicas")
+
+    referencias = [
+
     {
     "titulo":"Selecting Clinically Relevant Gait Characteristics for Classification of Early Parkinson’s Disease",
     "cita":"Rehman, R. Z. U., Del Din, S., Guan, Y., Yarnall, A. J., Shi, J. Q., & Rochester, L. (2019). Scientific Reports.",
@@ -376,6 +382,7 @@ elif section == "Referencias":
     "resumen":"Propone gobernar las neurotecnologías basadas en IA mediante un marco de derechos humanos."
     }
 
+    ]
 
     for ref in referencias:
 
@@ -387,13 +394,5 @@ elif section == "Referencias":
             st.info(ref["resumen"])
 
         st.markdown("---")
-
-    for titulo, resumen in referencias.items():
-
-        st.subheader(titulo)
-
-        if st.button(f"Mostrar resumen — {titulo}"):
-
-            st.info(resumen)
 
         st.markdown("---")
