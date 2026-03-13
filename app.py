@@ -1,17 +1,19 @@
 import streamlit as st
 
-# ---------------------------
-# Configuración de página
-# ---------------------------
+# ------------------------------------------------
+# CONFIGURACIÓN DE LA PÁGINA
+# ------------------------------------------------
+
 st.set_page_config(
     page_title="Neurología Digital e IA",
     page_icon="🧠",
     layout="wide"
 )
 
-# ---------------------------
-# Estilos CSS
-# ---------------------------
+# ------------------------------------------------
+# ESTILO CSS MINIMALISTA
+# ------------------------------------------------
+
 st.markdown("""
 <style>
 
@@ -44,9 +46,9 @@ margin-top:30px;
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------------------
+# ------------------------------------------------
 # SIDEBAR
-# ---------------------------
+# ------------------------------------------------
 
 st.sidebar.title("Panel de navegación")
 
@@ -64,11 +66,11 @@ section = st.sidebar.radio(
 )
 
 st.sidebar.markdown("---")
-st.sidebar.info("Dashboard de divulgación científica sobre IA y neurología.")
+st.sidebar.info("Dashboard de divulgación científica sobre Inteligencia Artificial y Neurología.")
 
-# ---------------------------
+# ------------------------------------------------
 # TÍTULO
-# ---------------------------
+# ------------------------------------------------
 
 st.markdown(
 '<div class="main-title">El Algoritmo del Olvido y el Paso del Tiempo: Cómo la IA y la Ética Redefinen la Neurología</div>',
@@ -80,9 +82,9 @@ st.markdown(
 unsafe_allow_html=True
 )
 
-# ---------------------------
+# ------------------------------------------------
 # INTRODUCCIÓN
-# ---------------------------
+# ------------------------------------------------
 
 if section == "Introducción":
 
@@ -93,50 +95,46 @@ La medicina moderna se encuentra en un punto de inflexión. Imagine un escenario
 
 Sin embargo, a medida que nuestras máquinas se vuelven más inteligentes para leer nuestro cerebro, surgen preguntas fundamentales: ¿Cómo protegemos nuestra privacidad mental? ¿Cómo garantizamos que estos algoritmos sean justos?
 
-Este artículo explora cómo el aprendizaje automático y la ética se han unido para transformar el diagnóstico del Alzheimer y el Parkinson, basándose en una sólida estructura de investigación científica.
+Este artículo explora cómo el aprendizaje automático y la ética se han unido para transformar el diagnóstico del Alzheimer y el Parkinson.
 """)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------------------
+# ------------------------------------------------
 # ÉTICA
-# ---------------------------
+# ------------------------------------------------
 
 elif section == "Ética en IA":
 
     st.markdown('<div class="card">', unsafe_allow_html=True)
 
-    st.markdown("### Más allá de los números: Una ética 'con los pies en la tierra'")
+    st.markdown("### Más allá de los números: Una ética con los pies en la tierra")
 
     st.write("""
-Tradicionalmente, la ética en la tecnología se ha manejado mediante grandes principios abstractos, como "haz el bien" o "sé justo". No obstante, la realidad de los hospitales y los pacientes es mucho más compleja.
+Tradicionalmente, la ética en la tecnología se ha manejado mediante grandes principios abstractos, como "haz el bien" o "sé justo". Sin embargo, la realidad clínica es mucho más compleja.
 
-Por ello, expertos como Resseguier y Rodrigues (2021) proponen un cambio de visión: pasar de una ética teórica a una "ética como atención al contexto".
+Resseguier y Rodrigues (2021) proponen pasar de una ética teórica a una **ética como atención al contexto**, donde las decisiones tecnológicas consideran la realidad social de los pacientes.
 """)
 
-    st.markdown("#### El problema de la 'Caja Negra'")
+    st.markdown("#### El problema de la caja negra")
 
     st.write("""
-El motor de este avance es el Aprendizaje Automático (machine learning), un sistema que permite a las computadoras aprender patrones a partir de datos masivos.
+Muchos modelos de aprendizaje automático funcionan como una **caja negra**: generan resultados precisos, pero es difícil entender cómo llegaron a ellos.
 
-El reto es que muchas veces estos sistemas funcionan como una **"caja negra"**: sabemos qué resultado arrojan, pero no exactamente cómo llegaron a él.
-
-Si no prestamos atención al contexto social, corremos el riesgo de que los algoritmos hereden prejuicios o ignoren las desigualdades de la vida real.
+Esto puede generar problemas de transparencia y reproducir desigualdades si no se analizan los contextos sociales.
 """)
 
-    st.markdown("#### Neuroética e IA: Una alianza necesaria")
+    st.markdown("#### Neuroética e IA")
 
     st.write("""
-Cuando hablamos de enfermedades del cerebro, la ética de los datos se mezcla con la **neuroética**, que estudia las implicaciones de intervenir en la mente humana.
-
-Dado que estas tecnologías tocan fibras sensibles como nuestra identidad y autonomía, diversos autores sostienen que la colaboración entre expertos en ética de IA y neurocientíficos es vital.
+Cuando se trata del cerebro humano, la ética de la IA se conecta con la **neuroética**, disciplina que analiza las implicaciones morales de intervenir en procesos mentales.
 """)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------------------
+# ------------------------------------------------
 # ALZHEIMER
-# ---------------------------
+# ------------------------------------------------
 
 elif section == "Diagnóstico del Alzheimer":
 
@@ -145,32 +143,24 @@ elif section == "Diagnóstico del Alzheimer":
     st.markdown("### Detectando el Alzheimer antes de que se pierdan los recuerdos")
 
     st.write("""
-La enfermedad de Alzheimer es la causa más común de demencia en el mundo. Detectarla a tiempo es como intentar encontrar una aguja en un pajar de datos clínicos.
+Las **redes neuronales convolucionales (CNN)** permiten analizar resonancias magnéticas para detectar patrones asociados al Alzheimer.
 
-Aquí es donde entran las **Redes Neuronales Convolucionales (CNN)**.
+Investigaciones recientes han alcanzado **precisiones cercanas al 98% en el diagnóstico temprano** mediante análisis automatizado de imágenes cerebrales.
 """)
 
-    st.markdown("#### Los ojos digitales de la medicina")
+    st.markdown("#### La marcha como biomarcador")
 
     st.write("""
-Las CNN son un tipo de diseño de IA inspirado en la visión humana, ideal para analizar imágenes médicas.
+Además de las imágenes cerebrales, la forma en que caminamos también puede revelar cambios neurológicos.
 
-Cuando se aplican a las resonancias magnéticas, los resultados son sorprendentes. Investigaciones han logrado niveles de precisión cercanos al **98.67% en el diagnóstico temprano**.
-""")
-
-    st.markdown("#### La marcha como espejo del cerebro")
-
-    st.write("""
-El cerebro no solo se observa en imágenes; también se refleja en la manera en que nos movemos.
-
-La forma de caminar —la marcha— puede convertirse en un **biomarcador digital temprano**, revelando alteraciones neurológicas antes de que los síntomas sean evidentes.
+La variabilidad del paso o la velocidad de la marcha pueden funcionar como **biomarcadores digitales tempranos**.
 """)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------------------
+# ------------------------------------------------
 # PARKINSON
-# ---------------------------
+# ------------------------------------------------
 
 elif section == "Parkinson y aprendizaje automático":
 
@@ -179,35 +169,32 @@ elif section == "Parkinson y aprendizaje automático":
     st.markdown("### El Parkinson bajo la lupa de los algoritmos")
 
     st.write("""
-El Parkinson es una enfermedad compleja y a menudo subjetiva; lo que un médico ve como un temblor leve, otro podría interpretarlo de forma distinta.
+El Parkinson es una enfermedad compleja cuyo diagnóstico clínico puede variar entre especialistas.
 
-El aprendizaje automático permite una **medición objetiva** basada en datos.
+El aprendizaje automático permite analizar parámetros de movimiento para detectar patrones asociados a la enfermedad.
 """)
 
-    st.markdown("#### Los cinco pilares del movimiento")
+    st.markdown("#### Cinco parámetros clave")
 
     st.write("""
-Investigaciones han identificado cinco parámetros clave para una detección temprana:
-
 • Velocidad media del paso  
 • Longitud del paso  
-• Variabilidad de la longitud  
+• Variabilidad del paso  
 • Ancho del paso  
 • Variabilidad del ancho
 """)
 
-    st.markdown("#### Tecnología para llevar puesta (Wearables)")
+    st.markdown("#### Sensores portátiles")
 
     st.write("""
-Los sensores portátiles permiten monitoreo continuo del movimiento.  
-Esto facilita detectar cuándo la medicación está funcionando correctamente y cuándo deja de hacerlo.
+Los **wearables** permiten monitoreo continuo del movimiento y ayudan a detectar cuándo la medicación está funcionando correctamente.
 """)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------------------
+# ------------------------------------------------
 # NEUROLOGÍA DIGITAL
-# ---------------------------
+# ------------------------------------------------
 
 elif section == "Neurología Digital":
 
@@ -218,45 +205,35 @@ La integración de IA, neuroimagen y sensores portátiles está dando lugar a un
 
 Este enfoque combina:
 
-**Lo estructural:** imágenes cerebrales analizadas por IA.  
-**Lo funcional:** análisis de la marcha y comportamiento motor.
+**Lo estructural:** imágenes cerebrales analizadas por IA  
+**Lo funcional:** análisis del movimiento y comportamiento motor
 
-Esta visión holística permite una **detección temprana más precisa** y tratamientos personalizados.
+Esta visión permite **detección temprana y tratamientos personalizados**.
 """)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------------------
+# ------------------------------------------------
 # CONCLUSIÓN
-# ---------------------------
+# ------------------------------------------------
 
 elif section == "Conclusión":
 
     st.markdown('<div class="card">', unsafe_allow_html=True)
 
     st.write("""
-La inteligencia artificial tiene el potencial de devolvernos tiempo y calidad de vida frente a enfermedades neurodegenerativas.
+La inteligencia artificial tiene el potencial de transformar el diagnóstico y tratamiento de enfermedades neurodegenerativas.
 
-Sin embargo, el verdadero éxito de estas tecnologías no se medirá solo por su precisión, sino por su capacidad para integrarse en sistemas de salud que prioricen la **transparencia, la equidad y la dignidad humana**.
+Sin embargo, el verdadero éxito de estas tecnologías dependerá de su integración en sistemas de salud que prioricen **transparencia, equidad y dignidad humana**.
 """)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ---------------------------
+# ------------------------------------------------
 # REFERENCIAS
-# ---------------------------
+# ------------------------------------------------
 
 elif section == "Referencias":
-
-    st.header("Artículos científicos")
-
-  elif section == "Referencias":
-
-    st.header("Referencias científicas")
-
-    referencias = [
-
-    elif section == "Referencias":
 
     st.header("Referencias científicas")
 
@@ -264,122 +241,50 @@ elif section == "Referencias":
 
     {
     "titulo":"Selecting Clinically Relevant Gait Characteristics for Classification of Early Parkinson’s Disease",
-    "cita":"Rehman, R. Z. U., Del Din, S., Guan, Y., Yarnall, A. J., Shi, J. Q., & Rochester, L. (2019). Scientific Reports.",
-    "resumen":"Estudio que usa machine learning para seleccionar las características de la marcha más relevantes para clasificar Parkinson temprano con alta precisión usando solo cinco variables."
+    "cita":"Rehman et al. (2019) Scientific Reports",
+    "resumen":"Estudio que usa machine learning para seleccionar características de la marcha para clasificar Parkinson temprano con alta precisión usando cinco variables."
     },
 
     {
     "titulo":"A supervised machine learning approach to detect the On/Off state in Parkinson's disease",
-    "cita":"Aich, S., et al. (2020). Diagnostics.",
-    "resumen":"Propone un algoritmo de machine learning supervisado que detecta automáticamente los estados On y Off en pacientes con Parkinson utilizando sensores de movimiento."
+    "cita":"Aich et al. (2020) Diagnostics",
+    "resumen":"Algoritmo supervisado que detecta automáticamente los estados On y Off de medicación en pacientes con Parkinson usando sensores de movimiento."
     },
 
     {
     "titulo":"Neuroethics and AI ethics: a proposal for collaboration",
-    "cita":"Salles, A., & Farisco, M. (2024). BMC Neuroscience.",
-    "resumen":"Argumenta que la convergencia entre IA y neurociencia requiere una colaboración estrecha entre ética de IA y neuroética para abordar cuestiones de privacidad, autonomía y sesgos."
+    "cita":"Salles & Farisco (2024) BMC Neuroscience",
+    "resumen":"Propone colaboración entre neuroética y ética de IA para abordar problemas de privacidad mental, sesgos y gobernanza."
     },
 
     {
     "titulo":"Predictive power of gait and gait-related cognitive measures",
-    "cita":"Tuena, C., et al. (2024). Frontiers in Human Neuroscience.",
-    "resumen":"Estudio que usa machine learning para evaluar cómo alteraciones en la marcha y pruebas cognitivas pueden predecir la progresión de deterioro cognitivo leve a Alzheimer."
+    "cita":"Tuena et al. (2024)",
+    "resumen":"Estudio que usa machine learning para predecir progresión de deterioro cognitivo leve a Alzheimer mediante análisis de marcha."
     },
 
     {
     "titulo":"Machine learning models for Parkinson's disease detection",
-    "cita":"Ferreira, M. I. A. S. N., et al. (2022). Gait & Posture.",
-    "resumen":"Modelos de machine learning capaces de detectar Parkinson y clasificar estadios de la enfermedad utilizando parámetros espacio-temporales de la marcha."
-    },
-
-    {
-    "titulo":"On the Contribution of Neuroethics to the Ethics and Regulation of Artificial Intelligence",
-    "cita":"Farisco, M., Salles, A., & Evers, K. (2022). Neuroethics.",
-    "resumen":"Propone que la neuroética contribuya con análisis conceptual profundo para mejorar las guías éticas actuales de IA."
-    },
-
-    {
-    "titulo":"The AI inflection point in clinical neuropsychology",
-    "cita":"Serafimovska A., Challinor K., Florio T. (2025). Journal of Clinical and Experimental Neuropsychology.",
-    "resumen":"Describe un punto de inflexión en la neuropsicología clínica debido al avance de la IA en evaluación cognitiva y diagnóstico temprano."
+    "cita":"Ferreira et al. (2022)",
+    "resumen":"Modelos de IA que detectan Parkinson y clasifican etapas de la enfermedad usando parámetros espacio-temporales de la marcha."
     },
 
     {
     "titulo":"Ethics as attention to context",
-    "cita":"Resseguier, A., & Rodrigues, R. (2021). Open Research Europe.",
-    "resumen":"Critica las guías éticas abstractas de IA y propone un enfoque basado en atención al contexto para aplicaciones reales."
+    "cita":"Resseguier & Rodrigues (2021)",
+    "resumen":"Propone una ética de IA basada en atención al contexto en lugar de principios abstractos."
     },
 
     {
     "titulo":"Early diagnosis of Alzheimer's disease from MRI images",
-    "cita":"Javid, S. A., & Feghhi, M. M. (2021). IEEE Access.",
-    "resumen":"Modelo de deep learning basado en redes convolucionales para diagnóstico temprano de Alzheimer mediante resonancias magnéticas."
-    },
-
-    {
-    "titulo":"Ethical considerations for integrating multimodal computer perception and neurotechnology",
-    "cita":"Hurley, M., et al. (2024). Frontiers in Human Neuroscience.",
-    "resumen":"Explora preocupaciones éticas sobre la integración de IA de percepción computacional con neurotecnologías."
-    },
-
-    {
-    "titulo":"Neurociberética",
-    "cita":"Ramos, R. (2024). Gaceta Médica de México.",
-    "resumen":"Propone la neurociberética como nuevo enfoque para abordar riesgos éticos derivados de la convergencia entre neurociencia, IA y cibernética."
-    },
-
-    {
-    "titulo":"Philosophical foundation of the right to mental integrity",
-    "cita":"Lavazza, A., & Giorgi, R. (2023). Neuroethics.",
-    "resumen":"Fundamenta filosóficamente el derecho a la integridad mental frente a tecnologías que pueden leer o modificar actividad cerebral."
-    },
-
-    {
-    "titulo":"Addressing neuroethics issues in practice",
-    "cita":"Berger, S. E., & Rossi, F. (2022). Neuron.",
-    "resumen":"Analiza lecciones aprendidas por empresas tecnológicas al implementar ética en IA aplicada a neurotecnologías."
-    },
-
-    {
-    "titulo":"Legal Governance of Brain Data Derived from Artificial Intelligence",
-    "cita":"Ahluwalia, M. (2021). Voices in Bioethics.",
-    "resumen":"Examina riesgos de privacidad asociados al big brain data generado por IA y propone gobernanza legal."
-    },
-
-    {
-    "titulo":"Neuropsychological tests and machine learning",
-    "cita":"Cazzolli, C., et al. (2025). Aging Clinical and Experimental Research.",
-    "resumen":"Estudio que usa Random Forest para identificar pruebas neuropsicológicas predictoras de deterioro cognitivo y demencia."
+    "cita":"Javid & Feghhi (2021)",
+    "resumen":"Modelo de deep learning para diagnóstico temprano de Alzheimer mediante resonancias magnéticas."
     },
 
     {
     "titulo":"Artificial Intelligence and Neuroscience: Transformative Synergies",
-    "cita":"Onciul, R., et al. (2025). Journal of Clinical Medicine.",
-    "resumen":"Revisión que explora la convergencia entre IA y neurociencia para diagnóstico temprano y tratamiento personalizado."
-    },
-
-    {
-    "titulo":"Ethical Implications of AI in Neuroscience",
-    "cita":"Merlin, M., et al. (2024). International Research Journal on Advanced Engineering and Management.",
-    "resumen":"Discute los desafíos éticos del uso de IA en investigación de enfermedades cerebrales."
-    },
-
-    {
-    "titulo":"Minding Rights: Mapping Ethical and Legal Foundations of Neurorights",
-    "cita":"Ligthart, S., et al. (2023). Cambridge Quarterly of Healthcare Ethics.",
-    "resumen":"Mapea las bases éticas y legales de los neurorights para proteger privacidad mental, libertad cognitiva e integridad mental."
-    },
-
-    {
-    "titulo":"Decoding the Brain, Respecting the Person",
-    "cita":"Botes, M., et al. (2025). Neuroethics.",
-    "resumen":"Explora modelos de consentimiento relacional para proteger libertad cognitiva y privacidad mental."
-    },
-
-    {
-    "titulo":"A human rights-based approach for governing neurotechnologies",
-    "cita":"McCulloch, W. S., & Pitts, W. (2022). Cambridge Handbook of Responsible AI.",
-    "resumen":"Propone gobernar las neurotecnologías basadas en IA mediante un marco de derechos humanos."
+    "cita":"Onciul et al. (2025)",
+    "resumen":"Revisión que describe la convergencia entre IA y neurociencia para diagnóstico temprano y tratamientos personalizados."
     }
 
     ]
@@ -387,12 +292,9 @@ elif section == "Referencias":
     for ref in referencias:
 
         st.subheader(ref["titulo"])
-
         st.write(ref["cita"])
 
-        if st.button(f"Mostrar resumen: {ref['titulo']}"):
+        if st.button(f"Mostrar resumen — {ref['titulo']}"):
             st.info(ref["resumen"])
-
-        st.markdown("---")
 
         st.markdown("---")
