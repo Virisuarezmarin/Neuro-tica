@@ -250,14 +250,144 @@ elif section == "Referencias":
 
     st.header("Artículos científicos")
 
-    referencias = {
-        "Rehman et al. (2019)": "Estudio que usa machine learning para seleccionar las características de la marcha más relevantes para clasificar Parkinson temprano con alta precisión.",
-        "Aich et al. (2020)": "Algoritmo de machine learning para detectar estados On/Off en Parkinson usando sensores portátiles.",
-        "Salles & Farisco (2024)": "Propone colaboración entre ética de IA y neuroética para abordar problemas éticos emergentes.",
-        "Tuena et al. (2024)": "Estudio que usa machine learning para predecir conversión de deterioro cognitivo leve a Alzheimer.",
-        "Ferreira et al. (2022)": "Modelos de aprendizaje automático para detectar Parkinson y clasificar sus etapas usando parámetros de marcha.",
-        "Javid & Feghhi (2021)": "Modelo de deep learning para diagnóstico temprano de Alzheimer usando imágenes de resonancia magnética."
+  elif section == "Referencias":
+
+    st.header("Referencias científicas")
+
+    referencias = [
+
+    {
+    "titulo":"Selecting Clinically Relevant Gait Characteristics for Classification of Early Parkinson’s Disease",
+    "cita":"Rehman, R. Z. U., Del Din, S., Guan, Y., Yarnall, A. J., Shi, J. Q., & Rochester, L. (2019). Scientific Reports.",
+    "resumen":"Estudio que usa machine learning para seleccionar las características de la marcha más relevantes para clasificar Parkinson temprano con alta precisión usando solo cinco variables."
+    },
+
+    {
+    "titulo":"A supervised machine learning approach to detect the On/Off state in Parkinson's disease",
+    "cita":"Aich, S., et al. (2020). Diagnostics.",
+    "resumen":"Propone un algoritmo de machine learning supervisado que detecta automáticamente los estados On y Off en pacientes con Parkinson utilizando sensores de movimiento."
+    },
+
+    {
+    "titulo":"Neuroethics and AI ethics: a proposal for collaboration",
+    "cita":"Salles, A., & Farisco, M. (2024). BMC Neuroscience.",
+    "resumen":"Argumenta que la convergencia entre IA y neurociencia requiere una colaboración estrecha entre ética de IA y neuroética para abordar cuestiones de privacidad, autonomía y sesgos."
+    },
+
+    {
+    "titulo":"Predictive power of gait and gait-related cognitive measures",
+    "cita":"Tuena, C., et al. (2024). Frontiers in Human Neuroscience.",
+    "resumen":"Estudio que usa machine learning para evaluar cómo alteraciones en la marcha y pruebas cognitivas pueden predecir la progresión de deterioro cognitivo leve a Alzheimer."
+    },
+
+    {
+    "titulo":"Machine learning models for Parkinson's disease detection",
+    "cita":"Ferreira, M. I. A. S. N., et al. (2022). Gait & Posture.",
+    "resumen":"Modelos de machine learning capaces de detectar Parkinson y clasificar estadios de la enfermedad utilizando parámetros espacio-temporales de la marcha."
+    },
+
+    {
+    "titulo":"On the Contribution of Neuroethics to the Ethics and Regulation of Artificial Intelligence",
+    "cita":"Farisco, M., Salles, A., & Evers, K. (2022). Neuroethics.",
+    "resumen":"Propone que la neuroética contribuya con análisis conceptual profundo para mejorar las guías éticas actuales de IA."
+    },
+
+    {
+    "titulo":"The AI inflection point in clinical neuropsychology",
+    "cita":"Serafimovska A., Challinor K., Florio T. (2025). Journal of Clinical and Experimental Neuropsychology.",
+    "resumen":"Describe un punto de inflexión en la neuropsicología clínica debido al avance de la IA en evaluación cognitiva y diagnóstico temprano."
+    },
+
+    {
+    "titulo":"Ethics as attention to context",
+    "cita":"Resseguier, A., & Rodrigues, R. (2021). Open Research Europe.",
+    "resumen":"Critica las guías éticas abstractas de IA y propone un enfoque basado en atención al contexto para aplicaciones reales."
+    },
+
+    {
+    "titulo":"Early diagnosis of Alzheimer's disease from MRI images",
+    "cita":"Javid, S. A., & Feghhi, M. M. (2021). IEEE Access.",
+    "resumen":"Modelo de deep learning basado en redes convolucionales para diagnóstico temprano de Alzheimer mediante resonancias magnéticas."
+    },
+
+    {
+    "titulo":"Ethical considerations for integrating multimodal computer perception and neurotechnology",
+    "cita":"Hurley, M., et al. (2024). Frontiers in Human Neuroscience.",
+    "resumen":"Explora preocupaciones éticas sobre la integración de IA de percepción computacional con neurotecnologías."
+    },
+
+    {
+    "titulo":"Neurociberética",
+    "cita":"Ramos, R. (2024). Gaceta Médica de México.",
+    "resumen":"Propone la neurociberética como nuevo enfoque para abordar riesgos éticos derivados de la convergencia entre neurociencia, IA y cibernética."
+    },
+
+    {
+    "titulo":"Philosophical foundation of the right to mental integrity",
+    "cita":"Lavazza, A., & Giorgi, R. (2023). Neuroethics.",
+    "resumen":"Fundamenta filosóficamente el derecho a la integridad mental frente a tecnologías que pueden leer o modificar actividad cerebral."
+    },
+
+    {
+    "titulo":"Addressing neuroethics issues in practice",
+    "cita":"Berger, S. E., & Rossi, F. (2022). Neuron.",
+    "resumen":"Analiza lecciones aprendidas por empresas tecnológicas al implementar ética en IA aplicada a neurotecnologías."
+    },
+
+    {
+    "titulo":"Legal Governance of Brain Data Derived from Artificial Intelligence",
+    "cita":"Ahluwalia, M. (2021). Voices in Bioethics.",
+    "resumen":"Examina riesgos de privacidad asociados al big brain data generado por IA y propone gobernanza legal."
+    },
+
+    {
+    "titulo":"Neuropsychological tests and machine learning",
+    "cita":"Cazzolli, C., et al. (2025). Aging Clinical and Experimental Research.",
+    "resumen":"Estudio que usa Random Forest para identificar pruebas neuropsicológicas predictoras de deterioro cognitivo y demencia."
+    },
+
+    {
+    "titulo":"Artificial Intelligence and Neuroscience: Transformative Synergies",
+    "cita":"Onciul, R., et al. (2025). Journal of Clinical Medicine.",
+    "resumen":"Revisión que explora la convergencia entre IA y neurociencia para diagnóstico temprano y tratamiento personalizado."
+    },
+
+    {
+    "titulo":"Ethical Implications of AI in Neuroscience",
+    "cita":"Merlin, M., et al. (2024). International Research Journal on Advanced Engineering and Management.",
+    "resumen":"Discute los desafíos éticos del uso de IA en investigación de enfermedades cerebrales."
+    },
+
+    {
+    "titulo":"Minding Rights: Mapping Ethical and Legal Foundations of Neurorights",
+    "cita":"Ligthart, S., et al. (2023). Cambridge Quarterly of Healthcare Ethics.",
+    "resumen":"Mapea las bases éticas y legales de los neurorights para proteger privacidad mental, libertad cognitiva e integridad mental."
+    },
+
+    {
+    "titulo":"Decoding the Brain, Respecting the Person",
+    "cita":"Botes, M., et al. (2025). Neuroethics.",
+    "resumen":"Explora modelos de consentimiento relacional para proteger libertad cognitiva y privacidad mental."
+    },
+
+    {
+    "titulo":"A human rights-based approach for governing neurotechnologies",
+    "cita":"McCulloch, W. S., & Pitts, W. (2022). Cambridge Handbook of Responsible AI.",
+    "resumen":"Propone gobernar las neurotecnologías basadas en IA mediante un marco de derechos humanos."
     }
+
+    ]
+
+    for ref in referencias:
+
+        st.subheader(ref["titulo"])
+
+        st.write(ref["cita"])
+
+        if st.button(f"Mostrar resumen: {ref['titulo']}"):
+            st.info(ref["resumen"])
+
+        st.markdown("---")
 
     for titulo, resumen in referencias.items():
 
